@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+#main{
+  height: 100%;
+  width: 100%;
+    background-color: #111;
+    padding: 25px 20px;
+    display: flex;
+    gap: 25px;
+    flex-wrap: nowrap;
+
+
+}
+
+.card{
+  height: 300px;
+  width: 300px;
+  background-color: aliceblue;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+
+}
+.card img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  object-position: center;
+
+}
+
+
+.bottom{
+  height: 40%;
+  width: 100%;
+  bottom: -40%;
+  transition: all ease 0.4s;
+  background: linear-gradient(transparent, black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0px 12px;
+  position: absolute;
+  color: white;
+
+}
+.bottom .icon{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+
+
+
+}
+.icon h3{
+  background-color: #222;
+  border-radius: 50%;
+  padding: 4px 6px
+}
+.bottom >h3:hover{
+  scale: 1.2;
+  transition: all ease 0.4s;
+  padding: 0px 10px;
+}
+.icon1:hover{
+  color: #222;
+  background-color: #fff;
+  scale: 1.2;
+    transition: all ease 0.3s;
+
+
+}
+.icon2:hover{
+  color: #222;
+  background-color: #fff;
+  scale: 1.2;
+    transition: all ease 0.3s;
+
+
+}
+
+
+.card:hover .bottom{
+  bottom: 0%;
+
+}

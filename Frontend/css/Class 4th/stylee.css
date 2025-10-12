@@ -1,0 +1,216 @@
+@font-face {
+    font-family: F1;
+    src: url(./DraculitoS_.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: #333;
+    color: #fff;
+    font-family: sans-serif;
+}
+
+#main {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+/* ---------- NAVIGATION ---------- */
+#nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 10px 40px;
+    position: relative;
+}
+
+#nav-part1,
+#nav-part2 {
+    display: flex;
+    gap: 15px;
+}
+
+#nav-part1 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+#nav-part2 a {
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+}
+
+#nav a {
+    text-decoration: none;
+    color: #fff;
+    margin-right: 12px;
+}
+
+#nav-title {
+    font-size: 25px;
+    font-weight: bold;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* ---------- MAIN HEADING ---------- */
+#main > h1 {
+    font-size: clamp(60px, 20vw, 380px);
+    font-weight: 400;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    padding: 10px;
+    text-align: center;
+}
+
+/* ---------- BOTTOM LEFT SECTION ---------- */
+#btmleft {
+    width: 300px;
+    padding: 30px;
+    position: absolute;
+    bottom: 10%;
+}
+
+#btmleft > h3 {
+    font-size: 22px;
+    width: 50px;
+    margin-bottom: 3px;
+}
+
+#btmleft > h4 {
+    margin-top: 16px;
+    font-size: 20px;
+}
+
+#btmleft > p {
+    margin-top: 3px;
+    font-size: 18px;
+}
+
+/* ---------- BOTTOM BAR ---------- */
+#btm {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    width: 100%;
+    padding: 20px 30px;
+}
+
+#btm > h4 {
+    font-size: 20px;
+}
+
+#btm > a {
+    text-decoration: none;
+    color: #fff; /* changed from #333 to white for visibility */
+    font-size: 20px;
+}
+
+/* ---------- IMAGES ---------- */
+#main > img {
+    height: 250px;
+}
+
+#first {
+    position: absolute;
+    top: 50%;
+    left: 43%;
+}
+
+#second {
+    position: absolute;
+    top: 40%;
+    left: 65%;
+    z-index: 99;
+}
+
+#third {
+    position: absolute;
+    top: 60%;
+    left: 55%;
+}
+
+/* ------------------------------------ */
+/* 📱 RESPONSIVE DESIGN FOR iPhone SE */
+/* ------------------------------------ */
+
+@media (max-width: 375px) {
+    #nav {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
+        gap: 10px;
+    }
+
+    #nav-part1,
+    #nav-part2 {
+        flex-direction: column;
+        gap: 6px;
+    }
+
+    #nav-title {
+        position: static;
+        transform: none;
+        font-size: 20px;
+        align-self: center;
+        margin: 10px 0;
+    }
+
+    #main > h1 {
+        font-size: 60px;
+        text-align: center;
+    }
+
+    #btmleft {
+        position: static;
+        width: 100%;
+        padding: 20px;
+    }
+
+    #btmleft h3,
+    #btmleft h4,
+    #btmleft p {
+        font-size: 14px;
+    }
+
+    #btm {
+        position: static;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 20px;
+    }
+
+    #btm h4,
+    #btm a {
+        font-size: 16px;
+    }
+
+    #first,
+    #second,
+    #third {
+        position: static;
+        display: block;
+        width: 90%;
+        height: auto;
+        margin: 10px auto;
+    }
+
+    body {
+        overflow-x: hidden;
+    }
+}

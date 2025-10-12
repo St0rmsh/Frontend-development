@@ -1,0 +1,72 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #111
+}
+
+@mixin img(){
+    background-position: center;
+    background-size: cover;
+}
+
+@mixin back($color) {
+    background-color:$color ;
+}
+
+main{
+
+    height: 100%;
+    width: 100%;
+    background-color: #333;
+    display: flex;
+    cursor: pointer;
+
+    section{
+        height: 100%;
+        flex-grow: 1;
+        transition: all ease 0.6s;
+        @include img()
+
+    }
+    section:hover{
+        flex-grow: 2;
+        background-position: center;
+        background-size: cover;
+    }
+    section:nth-child(1){
+        background-image: url(./004916f5c3c995a8d0f8f537c74ad443.jpg);
+        @include back(red)
+        
+    }
+     section:nth-child(2){
+                background-image: url(./0d71a1eae793e677dec8923264673292.jpg);
+                        @include back(blue)
+
+
+
+    }
+     section:nth-child(3){
+                background-image: url(./bdcd1b57fb709ad18b2578770f19841a.jpg);
+                        @include back(orange)
+
+
+    }
+     section:nth-child(4){
+                background-image: url(./f0acccdee427d7639448faff2f12b0c7.jpg);
+                        @include back(green)
+
+
+    }
+     section:nth-child(5){
+        background-image: url(./Thanos.jpeg);
+                @include back(yellow)
+
+
+    }
+}
