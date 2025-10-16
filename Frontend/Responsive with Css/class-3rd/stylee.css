@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #222;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+  grid-template-areas: "header header  section section section" "header header section  section section" "header header  figure figure figure";
+}
+main header {
+  grid-area: header;
+  background-color: red;
+  display: flex;
+}
+main header .img1 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 20px;
+  flex-grow: 1;
+}
+main section {
+  grid-area: section;
+  background-color: orange;
+  display: flex;
+}
+main section .img1 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 20px;
+  flex-grow: 1;
+}
+main figure {
+  grid-area: figure;
+  background-color: green;
+  display: flex;
+}
+main figure #img1 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 20px;
+  flex-grow: 1;
+}
+main figure #img2 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 20px;
+  flex-grow: 1;
+}
+main figure #img3 {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 20px;
+  flex-grow: 1;
+}/*# sourceMappingURL=stylee.css.map */
