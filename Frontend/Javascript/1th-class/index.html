@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script src="script.js"></script>
+</html>
+
+<!-- 08:04:00 -->  Completed JS Part1 
+
+<!-- Perfect! Here’s a **concise, one-page cheat sheet** summarizing everything we covered today — designed for quick review before interviews or coding sessions:
+
+---
+
+# 🟢 JavaScript Variables & Execution Context Cheat Sheet
+
+## 1️⃣ Variable Declarations: `var`, `let`, `const`
+
+| Feature                  | `var`                               | `let`                        | `const`                               |
+| ------------------------ | ----------------------------------- | ---------------------------- | ------------------------------------- |
+| Scope                    | Function-scoped                     | Block-scoped                 | Block-scoped                          |
+| Hoisted                  | ✅ Yes, initialized with `undefined` | ✅ Yes, not initialized       | ✅ Yes, not initialized                |
+| Temporal Dead Zone (TDZ) | ❌ No                                | ✅ Yes                        | ✅ Yes                                 |
+| Redeclaration            | ✅ Allowed                           | ❌ Not allowed                | ❌ Not allowed                         |
+| Reassignment             | ✅ Allowed                           | ✅ Allowed                    | ❌ Not allowed                         |
+| Notes                    | Can cause bugs due to hoisting      | Safer, for reassignable vars | Use by default; only prevents binding |
+
+### Quick Spoken Version:
+
+> `var` is function-scoped, hoisted and initialized with undefined.
+> `let` and `const` are block-scoped, hoisted but uninitialized → TDZ.
+> `const` cannot be reassigned, but object values can still change.
+
+---
+
+## 2️⃣ Hoisting
+
+* **Variables:** Only declarations are hoisted, not initializations.
+* **Function Declarations:** Fully hoisted (name + body).
+* **Function Expressions:** Hoisted depending on the variable keyword.
+
+```js
+console.log(a); // undefined
+var a = 10;
+
+console.log(b); // ReferenceError
+let b = 20;
+
+foo(); // Works
+function foo() { console.log("hi"); }
+
+bar(); // ReferenceError
+const bar = function() { console.log("hi"); }
+```
+
+---
+
+## 3️⃣ Temporal Dead Zone (TDZ)
+
+* Time between **entering scope** and **actual declaration** of `let`/`const`.
+* Accessing variables in TDZ → ReferenceError.
+
+```js
+{
+  console.log(x); // ❌ ReferenceError
+  let x = 5;      // TDZ ends here
+  console.log(x); // ✅ 5
+}
+```
+
+---
+
+## 4️⃣ Execution Context (EC)
+
+* **Environment** where JS code runs.
+
+* **Phases:**
+
+  1. **Creation Phase:**
+
+     * Memory allocated for variables and functions.
+     * `var` → undefined, `let/const` → uninitialized (TDZ).
+     * Functions → fully hoisted.
+  2. **Execution Phase:**
+
+     * Code runs line by line, values assigned, functions executed.
+
+* **Call Stack:**
+
+  * Tracks execution contexts.
+  * Push new EC on function call, pop when function finishes.
+
+---
+
+## 5️⃣ Quick Examples
+
+```js
+console.log(a); // undefined
+var a = 10;
+
+console.log(b); // ReferenceError
+let b = 20;
+
+function foo() { console.log("hi"); }
+foo(); // ✅ hi
+
+const obj = { name: "Alice" };
+obj.name = "Bob"; // ✅ Allowed
+```
+
+---
+
+💡 **Tips for Interviews:**
+
+1. Default to `const`, only use `let` if value changes. Avoid `var`.
+2. Always think **creation phase → execution phase → TDZ → call stack**.
+3. Predicting output = understanding **hoisting + scope + execution context**.
+
+---
+
+
+
+ -->
