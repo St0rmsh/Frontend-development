@@ -1,0 +1,76 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  color: var(--color);
+}
+
+.fill {
+  background-color: var(--color);
+}
+
+:root {
+  --background-color:#222;
+  --background-color2:crimson;
+  --color:#f4f4f4;
+  --spacing-xs:0.4rem;
+  --spacing-sm:0.8rem;
+  --spacing-m:1rem;
+  --spacing-x:2.5rem;
+  --spacing-2x:4rem;
+  --spacing-3x:8rem;
+  --border1x:1px solid #f4f4f4;
+  --border2x:2px solid #f4f4f4;
+  --border3x:3px solid #f4f4f4;
+  --border4x:4px solid #f4f4f4;
+  --border5x:5px solid #f4f4f4;
+  --borderblack1x:1px solid #1a1a1a;
+  --borderblack2x:2px solid #1a1a1a;
+  --border-radius1:5px;
+  --border-radius2:10px;
+  --border-radius3:20px;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  background-color: var(--background-color);
+}
+main section {
+  padding: var(--spacing-x) var(--spacing-2x);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-m);
+  height: 100%;
+}
+main section .infos {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+main section .infos .info {
+  border: var(--border2x);
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius2);
+}
+main section .board {
+  border: var(--border2x);
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+  grid-template-rows: repeat(auto-fill, minmax(80px, 1fr));
+  flex-wrap: wrap;
+}
+main section .board .block {
+  border: var(--border1x);
+  flex-direction: row;
+  flex-shrink: 0;
+}/*# sourceMappingURL=style.css.map */

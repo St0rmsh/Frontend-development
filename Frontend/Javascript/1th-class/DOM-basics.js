@@ -250,6 +250,7 @@ inp.addEventListener("input", (e) => {
 });
 
 // change :
+
 let selected = document.querySelector("#change > select");
 let htag = document.querySelector("#change > h3");
 
@@ -257,8 +258,35 @@ selected.addEventListener("change", () => {
   htag.textContent = `${selected.value} Device Selected`;
 });
 
+// 2nd 
+
+(function(){
+
+  let fileInput = document.querySelector('#inpfile')
+  let Input = document.querySelector('#inp > input')
+  
+  fileInput.addEventListener('click',()=>{
+    Input.click()
+  })
+  
+  Input.addEventListener('change',(details)=>{
+    let dets = details.target.files[0]
+    if (dets) {
+      fileInput.textContent = dets.name
+      
+    }
+    
+  })
+  
+  
+
+})()
+
+
+
 // Keydown :
 
+  
 let tagh3 = document.querySelector("main > h1");
 
 window.addEventListener("keydown", (value) => {
@@ -267,24 +295,188 @@ window.addEventListener("keydown", (value) => {
   } else {
     tagh3.textContent = `${value.key}`;
   }
-});
+})
 
-// submit :
+
+
+// submit : 
+
+let fom = document.querySelector('Form')
+let input = document.querySelectorAll('Form > input')
+
+let data = document.querySelector('#Form')
+ 
+
+let cards = document.querySelector('.cards')
+
+ 
+
+fom.addEventListener('submit',(event)=>{
+  event.preventDefault()
+   
+    let diiv = document.createElement('div')
+    diiv.classList.add('innerDiv');
+    let NameValue = event.target[0].value
+    let AgeValue = event.target[1].value
+    let EmailValue = event.target[2].value
+    let ImageValue = event.target[3].value
+
+
+   
+
+    let imag = document.createElement('img')
+
+    let name = document.createElement('h3')
+
+    let age = document.createElement('h4')
+
+    let Email = document.createElement('h3')
+    
+
+
+  name.textContent = `Name : ${NameValue}`;
+  age.textContent = `Age : ${AgeValue} `;
+  Email.textContent = `Email : ${EmailValue}`;
+  imag.setAttribute('src' , ImageValue)
+
+  diiv.appendChild(imag)
+  diiv.appendChild(name)
+  diiv.appendChild(age)
+  diiv.appendChild(Email)
+   
+  cards.appendChild(diiv)
+  data.appendChild(cards)
+
+
+  fom.reset()
+    
+    
+  })  
+
+
+
+
+
+
 
 // mouseover :
+
+let Over = document.querySelector('.over')
+
+Over.addEventListener('mouseover',()=>{
+  Over.style.backgroundColor = "yellow"
+})
+Over.addEventListener('mouseout',()=>{
+  Over.style.backgroundColor = "crimson"
+})
 
 // keyup :
 
 // Event object :
 
-// target :
+// target : Gives the content of the value in Dom
 
-//type :
+//type : Describes which type of Event is used
 
-// preventDefault :
+// preventDefault : disables refresh/relod when form is submitted 
+
+
 
 // Event bubbling :
 
 // Event capturing :
 
 // Event delegation :
+
+
+                     // Extra
+                     
+                     
+         let btn = document.querySelector('#tasks button')
+           
+         let Scree = document.querySelector('#tasks')
+        
+         let arr = ["Now ","What","To","Do","IN","JavaScript","I don't", "Know"]
+
+         btn.addEventListener('click',()=>{
+          let h1 = document.createElement('h1')
+          
+
+        
+
+
+
+
+          let rando = Math.floor(Math.random()*arr.length)
+          let x = Math.floor(Math.random()*100)
+          let y = Math.floor(Math.random()*100)
+
+          let c1 = Math.floor(Math.random()*256)
+          let c2 = Math.floor(Math.random()*256)
+          let c3 = Math.floor(Math.random()*256)
+          let scale = Math.floor(Math.random()*3)
+
+          let rotate = Math.floor(Math.random()*360)
+
+
+         
+
+          h1.textContent = arr[rando] 
+          
+          
+           h1.style.position = "absolute";
+           h1.style.top = x+"%"
+           h1.style.left = y+"%"
+           h1.style.rotate = rotate+"deg"
+           h1.style.scale = scale
+           h1.style.display = "wrap" 
+         
+           h1.style.color = `rgb(${c1},${c2},${c3})`
+
+          Scree.appendChild(h1)    
+          
+          console.log(h1);
+          
+          
+         })
+         
+
+
+
+          let div = document.querySelector('#outer .inner')
+          let butt = document.querySelector('#outer button')
+
+          let h1 = document.querySelector('.bottom h1')
+          
+
+          let a = 0
+          butt.addEventListener('click',()=>{
+
+           let intver =  setInterval(()=>{
+              a++
+              div.style.width = a+"%"
+              h1.textContent = a+"%"
+
+            },200)
+
+          setTimeout(()=>{
+            clearInterval(intver)
+            butt.textContent = "Downloaded"
+
+          },20000)
+
+
+          })
+
+
+
+
+          let click = document.querySelector('.image')
+
+          click.addEventListener('dblclick',()=>{
+            console.log('hello');
+            
+          })
+          
+
+          
