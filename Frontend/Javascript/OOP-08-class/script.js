@@ -751,18 +751,18 @@ getUserdeatils("Sujitkumar adddress", function(details){
 function getUserdetails(Username , Callback){
   console.log("fetching user deatils");
   let interval = setInterval(()=>{
-    Callback(
+    Callback( 
       {
-        name:"Sujit",
-        age:21,
-        Work:"Unemployed"
+        Name:"Sujit",
+        Age:21,
+        Work:"Unemployed",
       }
       
     )
-  },1000)
+  },10)
   setTimeout(()=>{
   clearInterval(interval)
-  },4000)
+  },40)
   
 
 }
@@ -880,6 +880,130 @@ class TaskQueue{
 }
 
 
+
+
+
+
+
+class Message{
+  constructor(name,UserName,address,email){
+    this.name = name;
+    this.UserName = UserName;
+    this.address = address;
+    this.email - email;
+    this.role = "User"
+
+  }
+  write(text){
+    let message = document.createElement('h2')
+    message.textContent= text;
+    document.body.appendChild(message)
+  }
+  checkrole(){
+    console.log(this.role);
+    
+  }
+}
+
+
+class Adim extends Message{
+  constructor(name,UserName,address,email){
+    super(name,UserName,address,email)
+    this.role = "Admin"
+    
+
+  }
+  delete(){
+    document.querySelectorAll("h2").forEach((elem)=>{
+      elem.remove()
+
+    })
+
+  }
+}
+
+let fist = new Message("Sujit","SujitKumar@45","Guwahati","sujitkumar45@gmail.com")
+let second = new Message("Su","SujKar@45","UP","sutkar29445@gmail.com")
+
+let Admin = new Adim("Admin","Admin","India","Admin@admin.com")
+
+
+
+
+
+let pr = new Promise((resolve,reject)=>{
+  setTimeout(() => {
+    let tando = Math.floor(Math.random()*10)
+
+  if (tando > 5) {
+    resolve("Resolved with  "+tando)
+    
+  }else{
+    reject("Rejected with " + tando)
+  }
+    
+  }, 2000);
+
+})
+
+async function AajaLele(Data) {
+  try {
+    let PE = await pr;
+    console.log(PE);
+    
+    
+  } catch (error) {
+    throw new Error(error)
+    
+  }
+  
+  
+  
+}
+AajaLele()
+
+
+
+
+let pre = new Promise((resolve,reject)=>{
+
+  setTimeout(() => {
+    let math = Math.floor(Math.random()*10)
+
+
+    if (math > 5) {
+      resolve(math)
+      
+    }else{
+      reject(math)
+    }
+    
+  }, 2000);
+})
+
+pre.then((value)=>{
+  console.log(value);
+  
+
+})
+.catch((value)=>{
+  throw new Error(value)
+})
+
+async function something(Value) {
+  try {
+    let newPr = await pre
+    console.log(`resloved with ${newPr}`);
+    
+    
+  } catch (error) {
+      throw new Error(`rejeted with ${error}`)
+
+    
+  }
+  
+}
+something()
 
 
 
