@@ -1,0 +1,141 @@
+import React, { createContext } from 'react'
+
+export const FetchDataContext = createContext();
+
+const UserContext = ({children}) => {
+
+const users = [
+  {
+    id: 1,
+    name: "Aarav Sharma",
+    age: 24,
+    profession: "Frontend Developer",
+    location: "Bangalore, India",
+    experience: 2,
+    skills: ["HTML", "CSS", "JavaScript", "React"],
+    email: "aarav.sharma@example.com",
+    avatar: "https://i.pravatar.cc/150?img=1",
+    isAvailable: true
+  },
+  {
+    id: 2,
+    name: "Priya Verma",
+    age: 27,
+    profession: "UI/UX Designer",
+    location: "Mumbai, India",
+    experience: 4,
+    skills: ["Figma", "Adobe XD", "User Research"],
+    email: "priya.verma@example.com",
+    avatar: "https://i.pravatar.cc/150?img=2",
+    isAvailable: false
+  },
+  {
+    id: 3,
+    name: "Rohan Mehta",
+    age: 29,
+    profession: "Backend Developer",
+    location: "Pune, India",
+    experience: 5,
+    skills: ["Node.js", "Express", "MongoDB"],
+    email: "rohan.mehta@example.com",
+    avatar: "https://i.pravatar.cc/150?img=3",
+    isAvailable: true
+  },
+  {
+    id: 4,
+    name: "Sneha Kapoor",
+    age: 26,
+    profession: "Full Stack Developer",
+    location: "Delhi, India",
+    experience: 3,
+    skills: ["React", "Node.js", "PostgreSQL"],
+    email: "sneha.kapoor@example.com",
+    avatar: "https://i.pravatar.cc/150?img=4",
+    isAvailable: true
+  },
+  {
+    id: 5,
+    name: "Vikram Singh",
+    age: 31,
+    profession: "DevOps Engineer",
+    location: "Hyderabad, India",
+    experience: 7,
+    skills: ["AWS", "Docker", "Kubernetes"],
+    email: "vikram.singh@example.com",
+    avatar: "https://i.pravatar.cc/150?img=5",
+    isAvailable: false
+  },
+  {
+    id: 6,
+    name: "Ananya Rao",
+    age: 23,
+    profession: "Software Intern",
+    location: "Chennai, India",
+    experience: 1,
+    skills: ["JavaScript", "Git", "Basics of React"],
+    email: "ananya.rao@example.com",
+    avatar: "https://i.pravatar.cc/150?img=6",
+    isAvailable: true
+  },
+  {
+    id: 7,
+    name: "Kunal Joshi",
+    age: 28,
+    profession: "Mobile App Developer",
+    location: "Ahmedabad, India",
+    experience: 4,
+    skills: ["React Native", "Flutter"],
+    email: "kunal.joshi@example.com",
+    avatar: "https://i.pravatar.cc/150?img=7",
+    isAvailable: true
+  },
+  {
+    id: 8,
+    name: "Neha Gupta",
+    age: 30,
+    profession: "Product Manager",
+    location: "Gurgaon, India",
+    experience: 6,
+    skills: ["Agile", "Scrum", "Roadmapping"],
+    email: "neha.gupta@example.com",
+    avatar: "https://i.pravatar.cc/150?img=8",
+    isAvailable: false
+  },
+  {
+    id: 9,
+    name: "Aditya Malhotra",
+    age: 34,
+    profession: "Tech Lead",
+    location: "Noida, India",
+    experience: 10,
+    skills: ["System Design", "Microservices", "Leadership"],
+    email: "aditya.malhotra@example.com",
+    avatar: "https://i.pravatar.cc/150?img=9",
+    isAvailable: true
+  },
+  {
+    id: 10,
+    name: "Isha Nair",
+    age: 25,
+    profession: "Data Analyst",
+    location: "Kochi, India",
+    experience: 2,
+    skills: ["Python", "SQL", "Power BI"],
+    email: "isha.nair@example.com",
+    avatar: "https://i.pravatar.cc/150?img=10",
+    isAvailable: true
+  }
+];
+
+
+  return (
+    <>
+    <FetchDataContext.Provider value={{users}}>
+      {children}
+    </FetchDataContext.Provider>
+
+    </>
+  )
+}
+
+export default UserContext

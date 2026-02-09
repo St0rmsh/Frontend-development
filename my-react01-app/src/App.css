@@ -1,0 +1,94 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 1rem;
+  text-align: center;
+}
+
+.logo {
+  height: 8em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms ease-in-out;
+  
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo {
+    animation: logo-spin infinite 15s linear;
+  }
+}
+
+.card {
+  padding: 1.2rem;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.card{
+  width: 200px;
+  background-color: #333;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+img{
+    animation: logo-spin infinite 10s linear;
+}
+i{
+  font-size: 16px;
+  padding-left: 0.1rem ;
+  cursor: pointer;
+}
+img:hover {
+  filter: drop-shadow(0 0 2rem #646cffaa);
+}
+img:hover {
+  filter: drop-shadow(0 0 2rem #61dafbaa);
+}
+.top{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.4rem 0.8rem;
+}
+.center{
+  display: flex;
+  flex-direction: column;
+
+}
+.bottom{
+  display: flex;
+  justify-content: space-between;
+  padding: 0.8rem 1.2rem;
+}
+.cards{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.box{
+  height: 300px;
+  width: 400px;
+  background-color: crimson;
+  border-radius: 20px;
+}

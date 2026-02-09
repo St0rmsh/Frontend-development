@@ -1,0 +1,90 @@
+@import 'remixicon/fonts/remixicon.css';
+@import "tailwindcss";
+
+
+
+* {
+ user-select: none;
+}
+button:active{
+ scale: 0.99;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background-color: #111
+}
+
+.bgimage{
+  background-image: url(./assets/pexels-gabriel-lorca-691086892-20860159.jpg);
+  background-size: cover;
+  background-position: center;
+}
+.button{
+  text-align: start;
+}
+
+.card6{
+  height: 350px;
+  width: 300px;
+  border-radius: 20px;
+  background-image: url(https://images.pexels.com/photos/20588811/pexels-photo-20588811.jpeg);
+  background-position: center;
+  background-size: cover;
+  cursor: pointer;
+}
+.card7{
+    cursor: pointer;
+
+  height: 350px;
+  width: 300px;
+  border-radius: 20px;
+  background-image: url(https://images.pexels.com/photos/34884741/pexels-photo-34884741.jpeg);
+    background-position: center;
+  background-size: cover;
+}
+.card8{
+  height: 350px;
+  width: 300px;
+  border-radius: 20px;
+  background-image: url(https://images.pexels.com/photos/35120620/pexels-photo-35120620.jpeg);
+    background-position: center;
+  background-size: cover;
+    cursor: pointer;
+
+}
+.card9{
+  height: 350px;
+  width: 300px;
+  border-radius: 20px;
+background-image: url(https://images.pexels.com/photos/18055207/pexels-photo-18055207.jpeg);
+  background-position: center;
+  background-size: cover;
+    cursor: pointer;
+
+}
+.card10{
+  height: 350px;
+  width: 300px;
+  border-radius: 20px;
+  background-image: url(https://images.pexels.com/photos/2601510/pexels-photo-2601510.jpeg);
+    background-position: center;
+  background-size: cover;
+    cursor: pointer;
+
+}
+
+.img1{
+ background-image: url(https://images.pexels.com/photos/6598961/pexels-photo-6598961.jpeg);
+  background-position: center;
+  background-size: cover;
+    cursor: pointer;
+}
+
+.img2{
+ background-image: url(https://images.pexels.com/photos/18705300/pexels-photo-18705300.jpeg);
+  background-position: center;
+  background-size: cover;
+    cursor: pointer;
+}
