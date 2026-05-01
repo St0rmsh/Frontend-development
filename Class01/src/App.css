@@ -1,0 +1,39 @@
+@import "tailwindcss";
+@import 'remixicon/fonts/remixicon.css';
+main{
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card{
+  flex-direction: column;
+}
+i{
+  font-size: 26px;
+  padding: 2px;
+  font-weight: 500;
+  text-align: center;
+}
+.user{
+    flex-direction: column;
+    text-align: center;
+    display: flex;
+    gap: 30;
+
+}
+
+.count{
+  text-align: center;
+}
+
+h4{
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 17px;
+    font-weight: 600;
+
+}
+h3{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 17px;
+  text-transform: capitalize;
+  font-weight: 500;
+}

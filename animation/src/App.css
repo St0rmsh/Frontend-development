@@ -1,0 +1,271 @@
+
+@import "tailwindcss";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body,#root {
+  width: 100%;
+  background-color: #2a2a2a;
+  color: whitesmoke;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+
+}
+main{
+  position: relative;
+}
+section{
+  min-height: 100vh;
+  position: relative;
+  z-index: 2;
+
+}
+
+#canvas::after{
+  content: "";
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+   background-image:url(/background-xl.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+   transition: all 0.3s linear;
+  
+}
+
+#section1{
+  --gap:4rem;
+
+  position: relative;
+
+ nav{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 2.5rem;
+      padding-top: 2rem;
+      .nav-elem:nth-child(2) {
+        i{
+          color: red;
+        }
+      }
+      svg{
+         max-width: 6rem;
+
+        height: 100%;
+        width: 100%;
+      }
+ }
+ .middle{
+  display: flex;
+  gap: var(--gap);
+
+  .left,.right{
+    width: 50%;
+  }
+  .left{
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    padding-block:7rem ;
+  }
+
+  h1{
+    font-size: 5rem;
+    line-height: 0.8;
+    text-align: right;
+  }
+ }
+ .bottom{
+  display: flex;
+  gap: var(--gap);
+  .left,.right{
+    width: 50%;
+  }
+  .right{
+    p{
+      font-weight: 200;
+      line-height: 1.5;
+    }
+  }
+ }
+
+ .first-line{
+  width: 35rem;
+  background-color: rgba(255, 0, 0, 0.318);
+  height: 1px;
+  position: absolute;
+  transform: rotate(45deg) translate(0,-18rem);
+ }
+ .second-line{
+  width: 10rem;
+  background-color: rgba(255, 0, 0, 0.318);
+  height: 1px;
+  position: absolute;
+  transform: rotate(135deg) ;
+  top: 23%;
+  right: 14%;
+ }
+}
+#section2{
+  .titles{
+    display: flex;
+    flex-direction: column;
+    padding-left:17rem ;
+    margin-block: 10rem;
+
+    .title{
+      display: flex;
+      cursor: pointer;
+      gap: 4rem;
+      opacity: 0.3;
+      padding-block:2rem;
+          transition: all 0.3s linear;
+
+
+      h1{
+        font-size: 4rem;
+        font-weight: 100;
+        line-height: 1;
+      }
+      small{
+        margin-top: 0.6rem;
+        font-size: 0.5rem;
+      }
+    }
+    .title:hover{
+      opacity: 1;
+    }
+  }
+}
+
+main:has(#section2 .title:hover) #canvas::after{
+  opacity: 0;
+}
+
+.images{
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+
+  img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all 0.3s linear;
+  }
+
+}
+
+main:has(#section2 .title[img-title = "tomorrowland"]:hover) #tomorrowland{
+  opacity: 1;
+  background-color: rgb(5, 14, 22);
+}
+main:has(#section2 .title[img-title = "Navy"]:hover) #Navy{
+  opacity: 1;
+  background-color: rgb(5, 14, 22);
+}
+main:has(#section2 .title[img-title = "MSI-chicago"]:hover) #MSI-chicago{
+  opacity: 1;
+  background-color: rgb(5, 14, 22);
+}
+main:has(#section2 .title[img-title = "Louise"]:hover) #Louise{
+  opacity: 1;
+  background-color: rgb(5, 14, 22);
+}
+main:has(#section2 .title[img-title = "KIKK"]:hover) #KIKK{
+  opacity: 1;
+  background-color: rgba(13, 98, 173, 0.768);
+}
+main:has(#section2 .title[img-title = "kennedy"]:hover) #kennedy{
+  opacity: 1;
+  background-color: rgb(5, 14, 22);
+}
+main:has(#section2 .title[img-title = "red"]:hover) #red{
+  opacity: 1;
+  background-color: rgba(215, 22, 22, 0.879);
+}
+
+
+#section3{
+  padding-top: 15rem;
+  padding-inline: 10rem;
+  position: relative;
+  z-index: 0;
+  isolation: isolate;
+  min-height: initial;
+
+  .top,.bottom{
+    display: flex;
+    width: 100%;
+        gap: 8rem;
+
+  }
+  .left,.right{
+    width: 50%;
+  }
+  .top .left{
+    text-align: right;
+    padding-left: 3rem;
+
+    h3{
+      font-size: 3rem;
+      opacity: 0.7;
+      font-weight: 200;
+    }
+  }
+  .bottom .right{
+    display: flex;
+    p{
+      opacity: 0.5;
+      font-weight: 200;
+      font-size: 0.7rem;
+    }
+  }
+
+}
+
+#section4{
+  padding-inline:10rem;
+  min-height: 80vh;
+
+   .top,.bottom{
+    display: flex;
+    width: 100%;
+    gap: 8rem;
+
+  }
+  .left,.right{
+    width: 50%;
+  }
+  .top .left{
+    text-align: right;
+    padding-left: 3rem;
+
+    h3{
+      font-size: 3rem;
+      opacity: 0.7;
+      font-weight: 200;
+    }
+  }
+  .bottom .right{
+    display: flex;
+    p{
+      opacity: 0.5;
+      font-weight: 200;
+      font-size: 0.7rem;
+    }
+  }
+
+}
