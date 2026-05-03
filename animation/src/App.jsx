@@ -4,7 +4,7 @@ import { useGSAP } from '@gsap/react'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import './App.css'
 import { Canvas } from '@react-three/fiber'
-import Fox from './Components/fox'
+import Fox from './Components/Fox'
 function App() {
   
   return (
